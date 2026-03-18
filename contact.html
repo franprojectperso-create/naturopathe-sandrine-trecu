@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez Sandrine Trecu, naturopathe à Pessac. Prenez rendez-vous par téléphone au 06.52.40.14.30 ou via le formulaire de contact.">
+    <title>Contact – Sandrine Trecu Naturopathe à Pessac</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-brand">
+                <span class="brand-name">Sandrine Trecu</span>
+                <span class="brand-title">Naturopathe · Réflexologue</span>
+            </a>
+            <ul class="nav-links" role="list">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="qui-suis-je.html">Qui suis-je ?</a></li>
+                <li><a href="naturopathie.html">Naturopathie</a></li>
+                <li><a href="consultation.html">Consultation</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="contact.html" class="nav-cta active">Prendre RDV</a></li>
+            </ul>
+            <button class="nav-hamburger" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="nav-mobile">
+        <a href="index.html">Accueil</a>
+        <a href="qui-suis-je.html">Qui suis-je ?</a>
+        <a href="naturopathie.html">Naturopathie</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="contact.html" class="btn btn-primary">Prendre rendez-vous</a>
+    </div>
+    <div class="nav-overlay"></div>
+
+    <!-- PAGE HERO -->
+    <header class="page-hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <a href="index.html">Accueil</a>
+                <span class="sep">›</span>
+                <span>Contact</span>
+            </nav>
+            <h1>Prendre rendez-vous</h1>
+            <p>Contactez-moi pour un premier échange, une question ou pour réserver votre consultation.</p>
+        </div>
+    </header>
+
+    <!-- CONTENU CONTACT -->
+    <section class="contact-page">
+        <div class="container">
+            <div class="contact-layout">
+
+                <!-- FORMULAIRE -->
+                <div class="contact-form-wrap reveal">
+                    <span class="section-label">Formulaire</span>
+                    <h2>Envoyez-moi un message</h2>
+                    <p>Je vous répondrai dans les meilleurs délais, généralement sous 24 à 48 heures.</p>
+
+                    <form id="contact-form" novalidate>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prenom">Prénom <span style="color:var(--brown)">*</span></label>
+                                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required autocomplete="given-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="nom">Nom <span style="color:var(--brown)">*</span></label>
+                                <input type="text" id="nom" name="nom" placeholder="Votre nom" required autocomplete="family-name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Adresse e-mail <span style="color:var(--brown)">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="votre@email.fr" required autocomplete="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone">Téléphone</label>
+                            <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00" autocomplete="tel">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="motif">Motif de la consultation <span style="color:var(--brown)">*</span></label>
+                            <select id="motif" name="motif" required>
+                                <option value="" disabled selected>Choisissez un motif…</option>
+                                <option value="bilan">Bilan vitalité (1ère consultation)</option>
+                                <option value="suivi">Consultation de suivi</option>
+                                <option value="reflexologie">Réflexologie plantaire</option>
+                                <option value="stress">Gestion du stress</option>
+                                <option value="alimentaire">Ajustement alimentaire</option>
+                                <option value="auriculotherapie">Auriculothérapie</option>
+                                <option value="cadeau">Bon cadeau</option>
+                                <option value="distance">Consultation à distance</option>
+                                <option value="autre">Autre / Renseignement</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Votre message <span style="color:var(--brown)">*</span></label>
+                            <textarea id="message" name="message" placeholder="Décrivez brièvement votre situation, vos attentes ou vos questions…" required></textarea>
+                        </div>
+
+                        <div class="form-group" style="display:flex; align-items:flex-start; gap:10px;">
+                            <input type="checkbox" id="rgpd" name="rgpd" required style="width:auto; margin-top:4px; flex-shrink:0;">
+                            <label for="rgpd" style="font-weight:400; font-size:0.83rem; color:var(--text-mid); cursor:pointer;">
+                                J'accepte que mes données soient utilisées pour traiter ma demande de contact.
+                                Elles ne seront pas transmises à des tiers.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:16px;">
+                            Envoyer le message
+                        </button>
+
+                        <div id="form-success" class="form-success">
+                            ✓ Votre message a bien été envoyé ! Je vous répondrai sous 24 à 48 heures.
+                        </div>
+                    </form>
+                </div>
+
+                <!-- INFOS CONTACT -->
+                <div class="contact-details reveal reveal-delay-1">
+                    <span class="section-label">Coordonnées</span>
+                    <h3>Où &amp; comment me joindre</h3>
+
+                    <div class="contact-detail">
+                        <div class="cd-icon" aria-hidden="true">📞</div>
+                        <div class="cd-text">
+                            <h4>Téléphone</h4>
+                            <p><a href="tel:0652401430">06.52.40.14.30</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="cd-icon" aria-hidden="true">✉️</div>
+                        <div class="cd-text">
+                            <h4>E-mail</h4>
+                            <p><a href="mailto:sandrine.trecu@gmail.com">sandrine.trecu@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="cd-icon" aria-hidden="true">📍</div>
+                        <div class="cd-text">
+                            <h4>Cabinet</h4>
+                            <address>
+                                334, Avenue du Maréchal<br>
+                                de Lattre de Tassigny<br>
+                                33600 Pessac
+                            </address>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="cd-icon" aria-hidden="true">💻</div>
+                        <div class="cd-text">
+                            <h4>Consultation à distance</h4>
+                            <p>Séances disponibles par téléphone ou visioconférence, partout en France.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <div class="cd-icon" aria-hidden="true">💳</div>
+                        <div class="cd-text">
+                            <h4>Paiement</h4>
+                            <p>Chèque, espèces ou PayPal</p>
+                        </div>
+                    </div>
+
+                    <!-- CARTE -->
+                    <div class="map-wrap">
+                        <iframe
+                            src="https://www.google.com/maps?q=334+Avenue+du+Mar%C3%A9chal+de+Lattre+de+Tassigny+33600+Pessac&output=embed"
+                            title="Localisation du cabinet de Sandrine Trecu à Pessac"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            aria-label="Carte Google Maps — Cabinet Sandrine Trecu, Pessac">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="f-name">Sandrine Trecu</span>
+                    <span class="f-title">Naturopathe · Réflexologue</span>
+                    <p>Cabinet de naturopathie à Pessac, près de Bordeaux. Consultations en cabinet ou à distance.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Navigation</h5>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="qui-suis-je.html">Qui suis-je ?</a></li>
+                        <li><a href="naturopathie.html">La naturopathie</a></li>
+                        <li><a href="consultation.html">La consultation</a></li>
+                        <li><a href="tarifs.html">Tarifs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <address>
+                        334, Av. du Maréchal<br>de Lattre de Tassigny<br>33600 Pessac<br><br>
+                        <a href="tel:0652401430">06.52.40.14.30</a><br>
+                        <a href="mailto:sandrine.trecu@gmail.com">sandrine.trecu@gmail.com</a>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sandrine Trecu – Naturopathe à Pessac. Tous droits réservés.</p>
+                <a href="mentions-legales.html">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="tel:0652401430" class="float-cta" aria-label="Appeler Sandrine Trecu">📞</a>
+    <script src="js/main.js"></script>
+</body>
+</html>
