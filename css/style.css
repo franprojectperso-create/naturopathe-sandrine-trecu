@@ -690,20 +690,18 @@ section { padding: 80px 0; }
     border-radius: var(--radius-md);
     overflow: hidden;
     position: relative;
-    height: 420px;
+    height: 480px;
     background: linear-gradient(135deg, #3A5E36 0%, var(--green-mid) 60%, #A8C898 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-shrink: 0;
 }
-.about-visual-monogram {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 9rem;
-    font-weight: 600;
-    color: rgba(255,255,255,0.18);
-    user-select: none;
-    line-height: 1;
+.about-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
 }
 .about-visual-tag {
     position: absolute;
@@ -1084,6 +1082,41 @@ footer {
     border-left: 4px solid var(--green);
 }
 .sidebar-card.accent { border-left-color: var(--brown); }
+
+/* Encadré portrait sidebar */
+.sidebar-profile { text-align: center; }
+.sidebar-profile > h4 { text-align: left; }
+
+.sidebar-profile-photo {
+    margin: 12px auto 14px;
+    width: 50%;
+}
+.sidebar-profile-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+.sidebar-profile-info {
+    text-align: center;
+}
+.sidebar-profile-info strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--green-dark);
+    display: block;
+    margin-bottom: 4px;
+}
+.sidebar-profile-info span {
+    font-size: 0.73rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    display: block;
+    line-height: 1.6;
+}
 .sidebar-card h4 { color: var(--green-dark); margin-bottom: 12px; font-size: 1.1rem; }
 .sidebar-card p, .sidebar-card address {
     font-size: 0.88rem;
@@ -1093,6 +1126,10 @@ footer {
 }
 .sidebar-card a { color: var(--green); font-weight: 700; }
 .sidebar-card a:hover { color: var(--green-dark); }
+.sidebar-card .btn-primary { color: var(--white) !important; }
+.sidebar-card .btn-primary:hover { color: var(--white) !important; }
+.sidebar-card .btn-outline { color: var(--green-dark); }
+.sidebar-card .btn-outline:hover { color: var(--white); }
 
 /* ===========================
    TECHNIQUES
@@ -1405,6 +1442,117 @@ footer {
     transform: scale(1.1);
 }
 @media (min-width: 1024px) { .float-cta { display: none; } }
+
+/* ===========================
+   IMAGES — STYLES SPÉCIFIQUES
+=========================== */
+
+/* Photo sidebar */
+.sidebar-photo {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-md);
+}
+.sidebar-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Portrait qui-suis-je */
+.profile-photo-wrap {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow-md);
+}
+.profile-photo-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Galerie consultation */
+.consult-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 32px 0;
+}
+@media (max-width: 600px) { .consult-gallery { grid-template-columns: 1fr; } }
+.consult-gallery-item {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4/3;
+    box-shadow: var(--shadow-sm);
+}
+.consult-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.consult-gallery-item:hover img { transform: scale(1.04); }
+.consult-gallery-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.55));
+    color: var(--white);
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    padding: 20px 14px 10px;
+    text-transform: uppercase;
+}
+
+/* Intro-band avec image de fond */
+.intro-band {
+    position: relative;
+    overflow: hidden;
+}
+.intro-band-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/foret_1.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.12;
+    z-index: 0;
+}
+.intro-band > .container { position: relative; z-index: 1; }
+
+/* Photo accès contact */
+.access-photo {
+    margin-top: 20px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+.access-photo img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Cabinet photo dans contact */
+.contact-cabinet-photo {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-sm);
+    aspect-ratio: 16/9;
+}
+.contact-cabinet-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
 /* ===========================
    UTILITAIRES
