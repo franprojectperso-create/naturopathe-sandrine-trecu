@@ -1225,6 +1225,11 @@ footer {
 }
 @media (min-width: 640px) {
     .techniques-grid { grid-template-columns: repeat(2, 1fr); }
+    .techniques-grid .technique-item:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        margin: 0 auto;
+    }
 }
 .technique-item {
     background: var(--cream);
@@ -1256,10 +1261,12 @@ footer {
    CONDITIONS TRAITÉES
 =========================== */
 .conditions-wrap { margin: 24px 0; }
+.naturo-btns { justify-content: center; }
 .conditions-wrap h3 { margin-bottom: 20px; }
 .conditions-grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 }
 .condition-tag {
