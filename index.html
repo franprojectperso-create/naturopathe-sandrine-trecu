@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
 
@@ -69,36 +69,33 @@
                     <a href="naturopathie.html" class="btn btn-secondary">Découvrir la naturopathie</a>
                 </div>
 
-                <div class="hero-badges">
-                    <span class="hero-badge">Naturopathie</span>
-                    <span class="hero-badge">Réflexologie plantaire</span>
-                    <span class="hero-badge">Gestion du stress</span>
-                    <span class="hero-badge">Consultations à distance</span>
-                </div>
             </div>
 
-            <!-- Colonne droite : cartes visuelles -->
-            <div class="hero-visual" aria-hidden="true">
+            <!-- Colonne droite : cartes visuelles (+ portrait mobile) -->
+            <div class="hero-visual">
+
+                <!-- Portrait Sandrine — mobile uniquement -->
+                <div class="hero-card hero-portrait-card">
+                    <div class="hero-portrait-info">
+                        <strong>Sandrine Trecu</strong>
+                        <span>Naturopathe &amp; Réflexologue</span>
+                    </div>
+                    <img src="images/sandrine_1.jpg" alt="Sandrine Trecu, naturopathe à Pessac" class="hero-portrait-img">
+                </div>
+
                 <!-- Carte services -->
                 <div class="hero-card">
                     <span class="hero-card-label">Mes pratiques</span>
                     <h4>Des soins naturels adaptés à chacun</h4>
                     <div class="hero-card-list">
                         <div class="hero-card-item">
-                            <span class="hero-card-dot"></span>
                             🌿 Naturopathie — bilan vitalité
                         </div>
                         <div class="hero-card-item">
-                            <span class="hero-card-dot"></span>
                             🦶 Réflexologie plantaire
                         </div>
                         <div class="hero-card-item">
-                            <span class="hero-card-dot"></span>
                             🧘 Gestion du stress
-                        </div>
-                        <div class="hero-card-item">
-                            <span class="hero-card-dot"></span>
-                            💻 Consultations à distance
                         </div>
                     </div>
                 </div>
@@ -119,10 +116,6 @@
             </div>
         </div>
 
-        <div class="hero-scroll" aria-hidden="true">
-            <span>Défiler</span>
-            <div class="hero-scroll-line"></div>
-        </div>
     </section>
 
     <!-- ========================= INTRO ========================= -->
@@ -193,6 +186,9 @@
     <!-- ========================= À PROPOS ========================= -->
     <section class="about-home">
         <div class="container">
+            <div class="section-header reveal" style="margin-bottom: 40px;">
+                <span class="section-label">Qui suis-je ?</span>
+            </div>
             <div class="about-home-inner">
                 <div class="about-visual reveal">
                     <img src="images/sandrine_2.jpg" alt="Sandrine Trecu, naturopathe et réflexologue à Pessac" class="about-photo" loading="lazy">
@@ -203,7 +199,6 @@
                 </div>
 
                 <div class="about-home-text reveal reveal-delay-1">
-                    <span class="section-label">Qui suis-je ?</span>
                     <h2>Passionnée par les médecines douces et la nature</h2>
                     <p>
                         Après un BTS d'assistante de direction et 15 années dans ce métier,
@@ -227,7 +222,7 @@
                         </div>
                     </div>
 
-                    <a href="qui-suis-je.html" class="btn btn-secondary">Découvrir mon parcours</a>
+                    <a href="qui-suis-je.html" class="btn btn-secondary" style="display:block; text-align:center;">Découvrir mon parcours</a>
                 </div>
             </div>
         </div>
